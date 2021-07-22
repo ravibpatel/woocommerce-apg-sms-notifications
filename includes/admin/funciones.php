@@ -26,6 +26,7 @@ function apg_sms_prefijo( $servicio ) {
 		"sipdiscount",
 		"smscountry",
 		"smsdiscount",
+        "smsgateway_rbsoft",
 		"smslane",
 		"springedge",
 		"twilio",
