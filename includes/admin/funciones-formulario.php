@@ -15,7 +15,6 @@ if ( $apg_sms_settings ) {
         } else if ( $wpml_activo ) { //Versión 3.2 o superior
             $$mensaje		= apply_filters( 'wpml_translate_single_string', esc_textarea( $apg_sms_settings[ $mensaje ] ), 'apg_sms', $mensaje );
         }
-        echo $$mensaje . " - " .$mensaje . "<br />";
     }
 } else { //Inicializa variables
     foreach ( $mensajes as $mensaje ) {
@@ -33,7 +32,7 @@ $listado_de_proveedores = [
 	"clockwork" 		=> "Clockwork", 
 	"esebun"			=> "Esebun Business ( Enterprise & Developers only )",
 	"isms"				=> "iSMS Malaysia",
-	"labsmobile"		=> "LabsMobile Spain",
+	"labsmobile"		=> "LabsMobile",
 	"mobtexting"		=> "MobTexting",
 	"moplet" 			=> "Moplet",
 	"moreify" 			=> "Moreify",
@@ -122,7 +121,8 @@ $campos_de_proveedores      = [
 		"clave_msg91" 						=> __( 'authentication key', 'woocommerce-apg-sms-notifications' ),
 		"identificador_msg91" 				=> __( 'sender ID', 'woocommerce-apg-sms-notifications' ),
 		"ruta_msg91" 						=> __( 'route', 'woocommerce-apg-sms-notifications' ),
-	],
+		"dlt_msg91"                         => __( 'template ID', 'woocommerce-apg-sms-notifications' ),
+    ],
 	"msgwow" 			=> [ 
 		"clave_msgwow"						=> __( 'key', 'woocommerce-apg-sms-notifications' ),
 		"identificador_msgwow"				=> __( 'sender ID', 'woocommerce-apg-sms-notifications' ),
@@ -265,6 +265,7 @@ $verificacion_de_proveedores    = [
     "short_sendsms",
     "gdpr_sendsms",
     "dlt_moplet",
+    "dlt_msg91",
 ];
 
 //Listado de estados de pedidos
@@ -420,7 +421,7 @@ function apg_sms_listado_de_mensajes( $listado_de_mensajes ) {
 Pinta los campos de mensajes
 */
 function apg_sms_campo_de_mensaje_personalizado( $campo, $campo_cliente, $listado_de_mensajes ) {
-    global $tab;
+    global $tab, $apg_sms_settings;
     
     //Listado de mensajes personalizados
     $listado_de_mensajes_personalizados = [
@@ -457,7 +458,6 @@ function apg_sms_campo_de_mensaje_personalizado( $campo, $campo_cliente, $listad
     
     //Listado de mensajes personalizados - DLT
     $listado_de_mensajes_dlt = [
-        'todos'					=> __( 'All messages template ID', 'woocommerce-apg-sms-notifications' ),
         'mensaje_pedido'		=> __( 'Owner custom message template ID', 'woocommerce-apg-sms-notifications' ),
         'mensaje_pendiente'		=> __( 'Order pending custom message template ID', 'woocommerce-apg-sms-notifications' ),
         'mensaje_fallido'		=> __( 'Order failed custom message template ID', 'woocommerce-apg-sms-notifications' ),
