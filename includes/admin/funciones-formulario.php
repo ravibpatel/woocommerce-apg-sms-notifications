@@ -177,6 +177,8 @@ $campos_de_proveedores      = [
 		"servidor_smsgateway_rbsoft"      => __( 'server', 'woocommerce-apg-sms-notifications' ),
 		"clave_smsgateway_rbsoft"         => __( 'API Key', 'woocommerce-apg-sms-notifications' ),
 		"identificador_smsgateway_rbsoft" => __( 'device ID', 'woocommerce-apg-sms-notifications' ),
+		"type_rbsoft"                     => __( 'type', 'woocommerce-apg-sms-notifications' ),
+		"prioritize_rbsoft"               => __( 'prioritize', 'woocommerce-apg-sms-notifications' ),
 	],
 	"smslane" 			=> [ 
 		"usuario_smslane"                 => __( 'key', 'woocommerce-apg-sms-notifications' ),
@@ -222,6 +224,14 @@ $campos_de_proveedores      = [
 
 //Opciones de campos de selección de los proveedores
 $opciones_de_proveedores        = [
+	"type_rbsoft"		=> [
+		"sms"					=> __( 'SMS', 'woocommerce-apg-sms-notifications' ),
+		"mms"					=> __( 'MMS', 'woocommerce-apg-sms-notifications' ),
+	],
+	"prioritize_rbsoft"	=> [
+		1						=> __( 'Yes', 'woocommerce-apg-sms-notifications' ),
+		0						=> __( 'No', 'woocommerce-apg-sms-notifications' ),
+	],
 	"ruta_adlinks"		=> [
 		1						=> 1, 
 		4						=> 4,
