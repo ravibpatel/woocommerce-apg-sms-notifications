@@ -159,12 +159,12 @@ $campos_de_proveedores      = [
 		"usuario_sipdiscount"             => __( 'username', 'woocommerce-apg-sms-notifications' ),
 		"contrasena_sipdiscount"          => __( 'password', 'woocommerce-apg-sms-notifications' ),
 	], 
-	"smscx"            => [
+	"smscx"            => [ 
 		"usuario_smscx"                   => __( 'application ID', 'woocommerce-apg-sms-notifications' ),
 		"contrasena_smscx"                => __( 'application secret', 'woocommerce-apg-sms-notifications' ),
 		"identificador_smscx"             => __( 'sender ID', 'woocommerce-apg-sms-notifications' ),
 	],
-	"smscountry" 		=> [
+	"smscountry" 		=> [ 
 		"usuario_smscountry"              => __( 'username', 'woocommerce-apg-sms-notifications' ),
 		"contrasena_smscountry"           => __( 'password', 'woocommerce-apg-sms-notifications' ),
 		"sid_smscountry"                  => __( 'sender ID', 'woocommerce-apg-sms-notifications' ),
@@ -173,11 +173,11 @@ $campos_de_proveedores      = [
 		"usuario_smsdiscount"             => __( 'username', 'woocommerce-apg-sms-notifications' ),
 		"contrasena_smsdiscount"          => __( 'password', 'woocommerce-apg-sms-notifications' ),
 	],
-    "smsgateway_rbsoft" => [
-        "servidor_smsgateway_rbsoft" 		=> __( 'server', 'woocommerce-apg-sms-notifications' ),
-        "clave_smsgateway_rbsoft" 			=> __( 'API Key', 'woocommerce-apg-sms-notifications' ),
-        "identificador_smsgateway_rbsoft"	=> __( 'device ID', 'woocommerce-apg-sms-notifications' ),
-    ],
+	"smsgateway_rbsoft" => [
+		"servidor_smsgateway_rbsoft"      => __( 'server', 'woocommerce-apg-sms-notifications' ),
+		"clave_smsgateway_rbsoft"         => __( 'API Key', 'woocommerce-apg-sms-notifications' ),
+		"identificador_smsgateway_rbsoft" => __( 'device ID', 'woocommerce-apg-sms-notifications' ),
+	],
 	"smslane" 			=> [ 
 		"usuario_smslane"                 => __( 'key', 'woocommerce-apg-sms-notifications' ),
 		"contrasena_smslane"              => __( 'client ID', 'woocommerce-apg-sms-notifications' ),
