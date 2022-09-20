@@ -186,7 +186,8 @@ function apg_sms_procesa_el_telefono( $pedido, $telefono, $servicio, $propietari
         $simbolo_mas    = [
             "smscx",
             "moreify",
-            "twilio"
+            "twilio",
+            "smsgateway_rbsoft"
         ];
         //Necesitan 00
         $doble_cero     = [
