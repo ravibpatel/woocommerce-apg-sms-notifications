@@ -4,9 +4,9 @@ Donate link: https://artprojectgroup.es/tienda/donacion
 Tags: Art Project Group, APG, Plugins, WooCommerce, e-Commerce, Commerce, Shop, Virtual shop, SMS, SMS notifications, SMS gateway, VoipStunt, Solutions Infini, Twilio, Twizo, Clickatell, Clockwork, BulkSMS, MobTexting, Moreify, MSG91, mVaayoo, Nexmo, Esebun Business (Enterprise & Developers only), iSMS Malaysia, SMS Lane (Transactional SMS only), SMS Country, LabsMobile, Plivo, VoipBusterPro, VoipBuster, SMS Discount, SIP Discount, Spring Edge, MSGWOW, Routee, Adlinks Labs, BulkGate, WooCommerce Sequential Order Numbers Pro, WPML, Altiria, sendSMS.ro, WhatsApp Message By WA Api
 Requires at least: 3.8
 Tested up to: 6.3
-Stable tag: 2.26
+Stable tag: 2.26.1
 WC requires at least: 2.1
-WC tested up to: 7.9
+WC tested up to: 8.5.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -27,15 +27,11 @@ Add to your WooCommerce store SMS notifications to your customers when order sta
  * [BulkSMS](http://www.bulksms.com/).
  * [Clickatell](https://www.clickatell.com/).
  * [Clockwork](https://www.clockworksms.com/).
- * [Esebun Business (Enterprise & Developers only)](http://www.bz.esebun.com/).
  * [iSMS Malaysia](http://www.isms.com.my/).
  * [LabsMobile](https://www.labsmobile.com/es).
  * [MobTexting](https://www.mobtexting.com).
  * [Moplet](https://moplet.com).
- * [Moreify](https://www.moreify.com/).
  * [MSG91](https://msg91.com/).
- * [MSGWOW](http://msgwow.com).
- * [mVaayoo](http://www.mvaayoo.com/).
  * [Nexmo](https://www.nexmo.com).
  * [Plivo](https://www.plivo.com/).
  * [Routee](https://www.routee.net).
@@ -53,7 +49,6 @@ Add to your WooCommerce store SMS notifications to your customers when order sta
  * [VoipBuster](https://www.voipbuster.com/dashboard).
  * [VoipBusterPro](https://www.voipbusterpro.com/dashboard).
  * [VoipStunt](https://www.voipstunt.com/dashboard).
- * WhatsApp Message By WA Api.
 * Possibility to inform the owner or owners the store about new orders.
 * Possibility to send, or not, international SMS.
 * Possibility to notify to shipping phone number, if it’s different from the billing phone number.
@@ -71,6 +66,7 @@ Add to your WooCommerce store SMS notifications to your customers when order sta
 * Has *apg_sms_message* filter to facilitate the customization of SMS messages from third-party plugins.
 * Has *apg_sms_message_return* filter to facilitate the customization of messages once they have been encoded from third-party plugins.
 * Has *apg_sms_send_message* filter to prevent sending the SMS messages from third-party plugins.
+* Has *apg_sms_normalize_message* filter to prevent SMS message normalization from third-party plugins.
 * Has *apg_sms_phone_process* and *apg_sms_phone_return* filters to facilitate the phone number process from third-party plugins.
 * Possibility to notify multiple phone numbers via filter *apg_sms_phone_return*.
 * Once setup is fully automated.
@@ -130,6 +126,11 @@ If you need help to configuring or installing **WC - APG SMS Notifications**, **
 1. Screenshot of WC - APG SMS Notifications.
 
 == Changelog ==
+= 2.26.1 =
+* Small fixes.
+* Removal of obsolete SMS providers.
+= 2.26.0.1 =
+* Added filter *apg_sms_normalize_message*. 
 = 2.26 =
 * Added HPOS support.
 = 2.25.0.1 =
@@ -457,8 +458,9 @@ If you need help to configuring or installing **WC - APG SMS Notifications**, **
 * Initial version.
 
 == Upgrade Notice ==
-= 2.26 =
-* Added HPOS support.
+= 2.26.1 =
+* Small fixes.
+* Removal of obsolete SMS providers.
 
 == Translations ==
 * *English*: by [**Art Project Group**](https://artprojectgroup.es/) (default language).
